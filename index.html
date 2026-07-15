@@ -5,21 +5,20 @@
   <title>Atlas Geográfico de Panamá</title>
   <script src="ruffle.js"></script>
   <style>
-  body {
-    margin: 0;
-    background-color: #ffffff; /* opcional */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* ocupa toda la pantalla */
-  }
+    body {
+      margin: 0;
+      background-color: #ffffff; /* opcional */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* ocupa toda la pantalla */
+    }
 
-  #flash-container {
-    width: 90vw;  /* 90% del ancho de la ventana */
-    height: 90vh; /* 90% del alto de la ventana */
-  }
-</style>
-
+    #flash-container {
+      width: 100vw;  /* ocupa todo el ancho */
+      height: 100vh; /* ocupa todo el alto */
+    }
+  </style>
 </head>
 <body>
   <div id="flash-container"></div>
@@ -27,6 +26,8 @@
     const ruffle = window.RufflePlayer.newest();
     const player = ruffle.createPlayer();
     document.getElementById("flash-container").appendChild(player);
+    player.style.width = "100%";
+    player.style.height = "100%";
     player.load("ATLAS FINAL FINAL (1).swf"); // usa el nombre exacto de tu archivo SWF
   </script>
 </body>
