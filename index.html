@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Atlas Geográfico de Panamá</title>
+  <script src="ruffle.js"></script>
+</head>
+<body>
+  <div id="flash-container"></div>
+  <script>
+    const ruffle = window.RufflePlayer.newest();
+    const player = ruffle.createPlayer();
+    document.getElementById("flash-container").appendChild(player);
+    player.load("ATLAS FINAL FINAL (1).swf"); // usa el nombre exacto de tu archivo SWF
+  </script>
+</body>
+</html>
